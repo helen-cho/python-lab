@@ -1,0 +1,176 @@
+<header class="sticky top-0 z-40 w-full border-b border-border/60 bg-white/90 backdrop-blur-md">
+  <div class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 overflow-visible px-4 sm:h-16 sm:px-6 xl:px-8">
+    <a href="/" class="group flex min-w-0 shrink-0 items-center gap-2 sm:gap-2.5">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-navy-900 text-white shadow-sm transition group-hover:bg-navy-800">
+        <i data-lucide="file-stack" class="h-5 w-5"></i>
+      </span>
+      <span class="truncate text-base font-semibold tracking-tight text-navy-900 sm:text-lg"><%= site.title %></span>
+    </a>
+
+    <nav class="site-nav-desktop min-w-0 flex-1 items-center justify-end gap-0.5 overflow-visible" aria-label="주요 메뉴">
+      <% navItems.forEach(function(item) { %>
+        <% if (item.children) { %>
+          <% const isParentActive = item.children.some(function(child) { return currentPath === child.href; }); %>
+          <div class="site-nav-dropdown relative shrink-0">
+            <button
+              type="button"
+              class="site-nav-dropdown-toggle inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-1.5 text-sm font-medium whitespace-nowrap transition-colors <%= isParentActive ? 'bg-navy-50 text-navy-800' : 'text-slate-600 hover:bg-muted hover:text-navy-900' %>"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i data-lucide="<%= item.icon %>" class="h-4 w-4 shrink-0"></i>
+              <%= item.label %>
+              <i data-lucide="chevron-down" class="site-nav-dropdown-chevron h-3.5 w-3.5 shrink-0 opacity-70 transition-transform"></i>
+            </button>
+            <div class="absolute right-0 top-full z-[60] pt-1">
+              <div class="site-nav-dropdown-panel hidden min-w-[10rem] rounded-md border border-border bg-white py-1 shadow-lg">
+              <% item.children.forEach(function(child) { %>
+                <% const isChildActive = currentPath === child.href; %>
+                <a
+                  href="<%= child.href %>"
+                  class="flex items-center gap-2 px-3 py-2 text-sm font-medium transition-colors <%= isChildActive ? 'bg-navy-50 text-navy-800' : 'text-slate-600 hover:bg-muted hover:text-navy-900' %>"
+                >
+                  <i data-lucide="<%= child.icon %>" class="h-4 w-4 shrink-0"></i>
+                  <%= child.label %>
+                </a>
+              <% }); %>
+              </div>
+            </div>
+          </div>
+        <% } else { %>
+          <% const isActive = currentPath === item.href; %>
+          <a
+            href="<%= item.href %>"
+            class="inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-1.5 text-sm font-medium whitespace-nowrap transition-colors <%= isActive ? 'bg-navy-50 text-navy-800' : 'text-slate-600 hover:bg-muted hover:text-navy-900' %>"
+          >
+            <i data-lucide="<%= item.icon %>" class="h-4 w-4 shrink-0"></i>
+            <%= item.label %>
+          </a>
+        <% } %>
+      <% }); %>
+    </nav>
+
+    <button
+      type="button"
+      id="mobile-menu-button"
+      class="site-nav-mobile-only inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-input bg-background text-navy-900 shadow-sm transition hover:bg-muted"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="메뉴 열기"
+    >
+      <i data-lucide="menu" class="h-5 w-5"></i>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="site-nav-mobile-only hidden border-t border-border bg-white">
+    <nav class="mx-auto flex max-h-[70vh] max-w-7xl flex-col gap-1 overflow-y-auto px-4 py-3 sm:px-6" aria-label="모바일 메뉴">
+      <% navItems.forEach(function(item) { %>
+        <% if (item.children) { %>
+          <% const isParentActive = item.children.some(function(child) { return currentPath === child.href; }); %>
+          <div class="site-nav-mobile-group">
+            <button
+              type="button"
+              class="site-nav-mobile-toggle flex w-full items-center justify-between gap-2 rounded-md px-3 py-2.5 text-base font-medium transition-colors <%= isParentActive ? 'bg-navy-50 text-navy-800' : 'text-slate-600 hover:bg-muted hover:text-navy-900' %>"
+              aria-expanded="<%= isParentActive ? 'true' : 'false' %>"
+            >
+              <span class="inline-flex items-center gap-2">
+                <i data-lucide="<%= item.icon %>" class="h-4 w-4"></i>
+                <%= item.label %>
+              </span>
+              <i data-lucide="chevron-down" class="site-nav-mobile-chevron h-4 w-4 shrink-0 transition-transform <%= isParentActive ? 'rotate-180' : '' %>"></i>
+            </button>
+            <div class="site-nav-mobile-submenu ml-2 flex flex-col gap-1 border-l border-border pl-3 <%= isParentActive ? '' : 'hidden' %>">
+              <% item.children.forEach(function(child) { %>
+                <% const isChildActive = currentPath === child.href; %>
+                <a
+                  href="<%= child.href %>"
+                  class="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors <%= isChildActive ? 'bg-navy-50 text-navy-800' : 'text-slate-600 hover:bg-muted hover:text-navy-900' %>"
+                >
+                  <i data-lucide="<%= child.icon %>" class="h-4 w-4"></i>
+                  <%= child.label %>
+                </a>
+              <% }); %>
+            </div>
+          </div>
+        <% } else { %>
+          <% const isActive = currentPath === item.href; %>
+          <a
+            href="<%= item.href %>"
+            class="inline-flex items-center gap-2 rounded-md px-3 py-2.5 text-base font-medium transition-colors <%= isActive ? 'bg-navy-50 text-navy-800' : 'text-slate-600 hover:bg-muted hover:text-navy-900' %>"
+          >
+            <i data-lucide="<%= item.icon %>" class="h-4 w-4"></i>
+            <%= item.label %>
+          </a>
+        <% } %>
+      <% }); %>
+    </nav>
+  </div>
+</header>
+
+<script>
+  (function () {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    function setDesktopDropdownOpen(dropdown, isOpen) {
+      const toggle = dropdown.querySelector('.site-nav-dropdown-toggle');
+      const panel = dropdown.querySelector('.site-nav-dropdown-panel');
+      const chevron = dropdown.querySelector('.site-nav-dropdown-chevron');
+      dropdown.classList.toggle('is-open', isOpen);
+      if (toggle) toggle.setAttribute('aria-expanded', String(isOpen));
+      if (panel) panel.classList.toggle('hidden', !isOpen);
+      if (chevron) chevron.classList.toggle('rotate-180', isOpen);
+    }
+
+    document.querySelectorAll('.site-nav-dropdown-toggle').forEach(function (toggle) {
+      toggle.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const dropdown = toggle.closest('.site-nav-dropdown');
+        if (!dropdown) return;
+
+        const willOpen = !dropdown.classList.contains('is-open');
+        document.querySelectorAll('.site-nav-dropdown.is-open').forEach(function (openDropdown) {
+          if (openDropdown !== dropdown) setDesktopDropdownOpen(openDropdown, false);
+        });
+        setDesktopDropdownOpen(dropdown, willOpen);
+      });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (event.target.closest('.site-nav-dropdown')) return;
+      document.querySelectorAll('.site-nav-dropdown.is-open').forEach(function (dropdown) {
+        setDesktopDropdownOpen(dropdown, false);
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape') return;
+      document.querySelectorAll('.site-nav-dropdown.is-open').forEach(function (dropdown) {
+        setDesktopDropdownOpen(dropdown, false);
+      });
+    });
+
+    if (button && menu) {
+      button.addEventListener('click', function () {
+        const isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', isOpen);
+        button.setAttribute('aria-expanded', String(!isOpen));
+        button.setAttribute('aria-label', isOpen ? '메뉴 열기' : '메뉴 닫기');
+      });
+
+      menu.querySelectorAll('.site-nav-mobile-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function () {
+          const group = toggle.closest('.site-nav-mobile-group');
+          const submenu = group && group.querySelector('.site-nav-mobile-submenu');
+          const chevron = toggle.querySelector('.site-nav-mobile-chevron');
+          if (!submenu) return;
+
+          const isOpen = !submenu.classList.contains('hidden');
+          submenu.classList.toggle('hidden', isOpen);
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+          if (chevron) chevron.classList.toggle('rotate-180', !isOpen);
+        });
+      });
+    }
+  })();
+</script>

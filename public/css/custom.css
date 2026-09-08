@@ -1,0 +1,174 @@
+html {
+  font-size: 106.25%;
+}
+
+body,
+.document-content {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  line-height: 1.7;
+}
+
+p,
+li,
+td,
+th,
+label,
+button,
+a {
+  line-height: 1.9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.55;
+}
+
+main p + p {
+  margin-top: 0.625rem;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(
+      115deg,
+      rgba(15, 23, 42, 0.62) 0%,
+      rgba(30, 58, 138, 0.32) 38%,
+      rgba(37, 99, 235, 0.12) 62%,
+      rgba(255, 255, 255, 0.02) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.12) 0%,
+      transparent 45%,
+      rgba(15, 23, 42, 0.22) 100%
+    );
+}
+
+.hero-overlay--light {
+  background:
+    linear-gradient(
+      115deg,
+      rgba(147, 197, 253, 0.18) 0%,
+      rgba(191, 219, 254, 0.16) 45%,
+      rgba(219, 234, 254, 0.22) 75%,
+      rgba(255, 255, 255, 0.42) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.38) 0%,
+      rgba(255, 255, 255, 0.12) 55%,
+      rgba(59, 130, 246, 0.04) 100%
+    );
+}
+
+section:has(.hero-overlay--light) .hero-aspect {
+  background-color: hsl(210 40% 99%);
+}
+
+section:has(.hero-overlay--light) .hero-content h1 {
+  color: hsl(222 47% 11%);
+  text-shadow: none;
+}
+
+section:has(.hero-overlay--light) .hero-content p {
+  color: hsl(221 55% 28%);
+  font-weight: 600;
+  text-shadow: none;
+}
+
+section:has(.hero-overlay--light) .hero-badge {
+  color: hsl(221 83% 38%);
+  border-color: hsl(221 83% 53% / 0.35);
+  background: rgba(255, 255, 255, 0.65);
+  text-shadow: none;
+}
+
+section:has(.hero-text--white) .hero-content h1,
+section:has(.hero-text--white) .hero-content p {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.28), 0 2px 10px rgba(15, 23, 42, 0.18);
+}
+
+section:has(.hero-text--white) .hero-badge {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.15);
+  text-shadow: none;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-badge {
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.35), 0 4px 16px rgba(15, 23, 42, 0.2);
+}
+
+.hero-content p {
+  font-weight: 600;
+}
+
+.hero-aspect {
+  aspect-ratio: 4 / 1;
+  min-height: 320px;
+}
+
+@media (max-width: 768px) {
+  .hero-aspect {
+    aspect-ratio: 3 / 2;
+    min-height: 300px;
+  }
+}
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header.sticky {
+  overflow: visible;
+}
+
+/* 네비: 960px 미만은 햄버거 메뉴 */
+.site-nav-desktop {
+  display: none;
+}
+
+.site-nav-mobile-only {
+  display: inline-flex;
+}
+
+#mobile-menu.site-nav-mobile-only {
+  display: none;
+}
+
+#mobile-menu.site-nav-mobile-only:not(.hidden) {
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .site-nav-desktop {
+    display: flex !important;
+    overflow: visible;
+  }
+
+  .site-nav-mobile-only {
+    display: none !important;
+  }
+
+  .site-nav-dropdown:hover .site-nav-dropdown-panel,
+  .site-nav-dropdown.is-open .site-nav-dropdown-panel {
+    display: block;
+  }
+
+  .site-nav-dropdown:hover .site-nav-dropdown-chevron {
+    transform: rotate(180deg);
+  }
+}

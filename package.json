@@ -1,0 +1,19 @@
+{
+  "name": "document-lab",
+  "version": "1.0.0",
+  "description": "AI 문서자동화 학습 웹사이트",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": ["document-automation", "express", "ejs"],
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
