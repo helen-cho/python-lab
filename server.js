@@ -25,7 +25,7 @@ const navItems = [
   { label: '기본문법', href: '/learning-examples', icon: 'file-text' },
   { label: '데이터수집', href: '/document-summary', icon: 'layers' },
   { label: '데이터분석과 시각화', href:'/data-analysis', icon: 'bar-chart-3' },
-  { label: '오픈AI API', href: '/vibe-coding', icon: 'notebook-pen' },
+  { label: '제미나이 API', href: '/vibe-coding', icon: 'sparkles' },
 ];
 
 // const navItems = [
@@ -236,12 +236,12 @@ app.get('/notebook-lm', (req, res) => {
 
 app.get('/vibe-coding', (req, res) => {
   res.render('pages/vibe-coding', {
-    pageTitle: '오픈AI API',
+    pageTitle: '제미나이 API',
     heroImage: '/images/notebook-lm-hero.png',
     heroImageAlt: '일상적인 대화(자연어)로 AI에게 지시해 앱이나 프로그램을 만드는 AI 중심의 소프트웨어 개발 방식',
     heroBadge: 'OpenAI API',
     heroBadgeIcon: 'notebook-pen',
-    heroTitle: '오픈AI API',
+    heroTitle: '제미나이 API',
     heroDescription:
       '인공지능 모델(LLM:Large Language Model)을 여러분의 서비스나 애플리케이션에 연결해서 바로 사용할 수 있게 해주는 인터페이스을 학습한다. ',
     heroShowDownload: false,

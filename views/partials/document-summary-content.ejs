@@ -109,7 +109,7 @@ requests. beautifulsoup4, playwright
   <p style="margin-bottom: 15px;">카카오 검색 API는 Daum 포털 검색 데이터를 기반으로 책, 블로그, 카페, 동영상 등 다양한 콘텐츠를 개발자가 자신의 서비스에 연동할 수 있게 해주는 REST API 인터페이스이다. REST API 방식(JSON 형태 응답)을 통해 웹/앱에서 쉽고 빠르게 검색 기능을 구현할 수 있으며, 일일 쿼터 내 무료로 이용 가능하다. API를 사용하기 위해서는 아래와 같이 새로운 앱을 정의하고 API키가 필요하다.</p>
   <p>1. [ <a href='https://developers.kakao.com/'><b><u>카카오 개발자 센터</u></b></a> ]-[ <b>앱</b> ]-[ <b>앱 생성</b> ]에서 새로운 앱을 생성한다.</p>
   <p>2. [ <b>생성한 앱</b> ]-[ <b>앱</b> ]-[ <b>플랫폼 키</b> ]-[ <b>REST API키</b> ]를 복사하여 사용한다.</p>
-  <p>3. 현재폴더에 <b>.env</b> 파일을 생성하고 <b>KAKAO_REST_API_KEY</b> 변수에 REST API키를 복사하여 붙여넣는다.</p>
+  <p>3. 프로젝트 폴더 <b>.env</b> 파일을 생성하고 <b>KAKAO_REST_API_KEY</b> 변수에 REST API키를 복사하여 붙여넣는다.</p>
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">KAKAO_REST_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</textarea>
   <!--------------------------------------------------------------------------------------------------------------------------->
 <!-- 7. 카카오 검색 도서 REST API -->
@@ -124,7 +124,7 @@ requests, tkinter
 @Docs https://developers.kakao.com/docs/ko
 
 [보안키]
-.env 파일 참고
+프로젝트 폴더 .env 파일에서 KAKAO_REST_API_KEY 변수 값 사용
 
 [요구사항]
 1. 기능: 특정 키워드를 입력받아 책 검색 결과 20개를 가져오는 함수를 정의한다.
@@ -146,7 +146,7 @@ requests, tkinter
 @Docs https://developers.kakao.com/docs/ko
 
 [보안키]
-.env 파일 참고
+프로젝트 폴더 .env 파일에서 KAKAO_REST_API_KEY 변수 값 사용
 
 [요구사항]
 1. 기능: 특정 키워드를 입력받아 블로그 검색 결과 20개를 가져오는 함수를 정의한다.
@@ -171,7 +171,7 @@ requests, tkinter
 @Docs https://developers.kakao.com/docs/ko
 
 [보안키]
-.env 파일 참고
+프로젝트 폴더 .env 파일에서 KAKAO_REST_API_KEY 변수 값 사용
 
 [요구사항]
 1. 기능: 특정 키워드를 입력받아 로컬 장소 검색 결과 20개를 가져오는 함수를 정의한다.
@@ -196,7 +196,7 @@ requests, tkinter
 @Docs https://developers.kakao.com/docs/ko
 
 [보안키]
-.env 파일 참고
+프로젝트 폴더 .env 파일에서 KAKAO_REST_API_KEY 변수 값 사용
 
 [요구사항]
 1. 기능: 특정 키워드를 입력받아 이미지 그 검색 결과 8개를 가져오는 함수를 정의한다.

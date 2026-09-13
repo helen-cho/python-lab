@@ -1,5 +1,5 @@
 <div class="document-content text-foreground">
-  <p class="doc-section-title">오픈AI API</p>
+  <p class="doc-section-title">제미나이 API</p>
   <p style="margin-bottom: 20px;">OpenAI API는 OpenAI가 개발한 강력한 인공지능 모델(LLM:Large Language Model)을 여러분의 서비스나 애플리케이션에 연결해서 바로 사용할 수 있게 해주는 인터페이스이다. 쉽게 말해 내 프로그램에 "똑똑한 뇌(AI)"를 빌려서 이식하는 도구라고 생각된다.</p>
   <p>1. <b>텍스트 생성 및 요약</b>: 챗봇, 기사 요약, 이메일 작성</p>
   <p>2. <b>코드 생성</b>: 파이썬, 자바스크립트 등 다양한 프로그래밍 언어로 코딩</p>
@@ -10,19 +10,19 @@
   <p>아래 사이트에 접속하여 [ <b>API 키</b> ]-[ <b>API 키 만들기</b> ]에서 API Key를 새로 발급받아 저장해 둔다.</p>
   <a href="https://aistudio.google.com/" style="font-weight: bold;font-size: 20px;"><u>https://aistudio.google.com/</u></a>
   <p class="doc-subtitle">2) 제미나이 API KEY 등록</p>
-  <p>현재 폴더 <b>.env</b> 파일을 생성하여 <b>OPENAI_API_KEY</b> 변수에 위에서 발급받은 값을 등록한다.</p>
+  <p>프로젝트 폴더 <b>.env</b> 파일을 생성하여 <b>OPENAI_API_KEY</b> 변수에 위에서 발급받은 값을 등록한다.</p>
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">GEMINI_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</textarea>
 <!--------------------------------------------------------------------------------------------------------------------------->
 <!-- 1. 회의록 요약분류 -->
 <!--------------------------------------------------------------------------------------------------------------------------->  
   <p class="doc-section-title">1. 회의록 요약분류</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 회의록을 요약 분류하는 프로그램을 작성하여 '오픈AP API' 폴더 '01.회의록요약분류.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이 API를 이용하여 회의록을 요약 분류하는 프로그램을 작성하여 '04.제미나이API' 폴더 '01.회의록요약분류.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 상위에 '파일선택' 버튼과 '요약분류하기' 버튼을 배치한다.
@@ -48,13 +48,13 @@ tkinter, gemini-3.6-flash 모델
 <!-- 2. 자기소개서 요약분류 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
   <p class="doc-section-title">2. 자기소개서 요약분류</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 자기소개서를 요약분류 하는 프로그램을 작성하여 '오픈AP API' 폴더 '02.자기소개서분류.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 자기소개서를 요약분류 하는 프로그램을 작성하여 '04.제미나이API' 폴더 '02.자기소개서분류.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 상위에 '파일선택' 버튼과 '요약분류하기' 버튼을 배치한다.
@@ -88,13 +88,13 @@ tkinter, gemini-3.6-flash 모델
 <!--  3. 기업행사 기획서 작성 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
   <p class="doc-section-title">3. 기업행사 기획서 작성</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 기업행사 기획서 작성 프로그램을 작성하여 '오픈AP API' 폴더 '03.기업행사기획서.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 기업행사 기획서 작성 프로그램을 작성하여 '04.제미나이API' 폴더 '03.기업행사기획서.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 입력항목들을 깔끔하고 보기 좋게 디자인하여 1열로 배치한다.
@@ -119,13 +119,13 @@ tkinter, gemini-3.6-flash 모델
 <!-- 4. 영어뉴스 요약번역 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
   <p class="doc-section-title">4. 영어뉴스 요약번역</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 영어뉴스 요약번역 프로그램을 작성하여 '오픈AP API' 폴더 '04.영어뉴스요약번역.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 영어뉴스 요약번역 프로그램을 작성하여 '04.제미나이API' 폴더 '04.영어뉴스요약번역.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 영어뉴스 사이트 URL를 입력할 텍스트 상자와 '영어뉴스 요약번역' 버튼을 한 줄에 배치한다.
@@ -143,14 +143,14 @@ tkinter, gemini-3.6-flash 모델
 <!--------------------------------------------------------------------------------------------------------------------------->
 <!-- 5. 이메일 자동작성 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
-  <p class="doc-section-title">5. 이메일 자동작성</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 이메일 자동작성 프로그램을 작성한 후 '오픈AP API' 폴더 '05.이메일 자동작성.py' 파일에 저장한다.
+  <p class="doc-section-title">5. 이메일 자동생성</p>
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 이메일 자동작성 프로그램을 작성한 후 '04.제미나이API' 폴더 '05.이메일자동생성.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 이메일 초안을 여러 줄로 입력할 텍스트 상자와 '이메일 자동작성' 버튼을 보기 좋게 배치한다.
@@ -178,13 +178,13 @@ tkinter, gemini-3.6-flash 모델
 <!--6. 음식 영양 분석기 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
   <p class="doc-section-title">6. 음식 영양 분석기</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 음식 정보를 분석하는 프로그램을 작성한 후 '오픈AP API' 폴더 '06.음식영양분석기.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 음식 정보를 분석하는 프로그램을 작성한 후 '04.제미나이API' 폴더 '06.음식영양분석기.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 입력정보 영역
@@ -205,13 +205,13 @@ tkinter, gemini-3.6-flash 모델
 <!-- 7. 영수증 판독기 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
   <p class="doc-section-title">7. 영수증 판독기</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 영수증을 분석하는 프로그램을 작성한 후 '오픈AP API' 폴더 '07.영수증판독기.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 영수증을 분석하는 프로그램을 작성한 후 '04.제미나이API' 폴더 '07.영수증판독기.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 입력정보 영역
@@ -237,13 +237,13 @@ tkinter, gemini-3.6-flash 모델
 <!-- 8. 데이터분석 시각화 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
   <p class="doc-section-title">8. 데이터분석 시각화</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 매출내역을 분석하는 프로그램을 작성한 후 '오픈AP API' 폴더 '08.데이터분석시각화.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 매출내역을 분석하는 프로그램을 작성한 후 '04.제미나이API' 폴더 '08.데이터분석시각화.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 매출내역 업로드 버튼과 분석결과 버튼을 배치한다.
@@ -275,12 +275,12 @@ tkinter, gemini-3.6-flash 모델
 <!-- 9. 챗봇 프로그램 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
   <p class="doc-section-title">9. 챗봇 프로그램</p>
-  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 오픈AI API를 이용하여 사용자의 질문에 GPT가 답변하는 프로그램을 작성한 후 '오픈AP API' 폴더 '09.챗봇.py' 파일에 저장한다.
+  <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 사용자의 질문에 GPT가 답변하는 프로그램을 작성한 후 '04.제미나이API' 폴더 '09.챗봇.py' 파일에 저장한다.
 [기술스택]
-tkinter, gemini-3.6-flash 모델
+tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
-.env 파일에서 GEMINI_API_KEY 변수 값 사용
+프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 화면구성
