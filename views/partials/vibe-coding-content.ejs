@@ -19,21 +19,22 @@
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이 API를 이용하여 회의록을 요약 분류하는 프로그램을 작성하여 '04.제미나이API' 폴더 '01.회의록요약분류.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
-1. 상위에 '파일선택' 버튼과 '요약분류하기' 버튼을 배치한다.
+1. 상위에 파일선택 버튼과 요약분류하기 버튼을 한줄로 배치한다.
 2. 회의록 요약분류 결과를 출력할 텍스트 상자를 배치한다.
 3. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-4. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-5. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+4. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+5. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+6. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
-1. '파일선택' 버튼 클릭 시 회의록 초안 파일을 선택한다.
-2. '요약분류하기' 버튼 클릭 시 아래 [요약분류] 내용을 참고하여 회의록 초안 내용을 요약 분류하여 깔끔하고 보기 좋게 출력한다.
+1. 파일선택 버튼 클릭 시 회의록 초안 파일을 선택한다.
+2. 요약분류하기 버튼 클릭 시 아래 [요약분류] 내용을 참고하여 회의록 초안 내용을 요약 분류하여 깔끔하고 보기 좋게 출력한다.
 
 [요약분류]
 1. 회의개요: 주제, 일시 및 장소, 참석자
@@ -43,7 +44,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 5. 미결사항: 이번 회의에서 결론이 나지 않아 추가 논의가 필요한 점</textarea>
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">[추가 요구사상]
 1. '요약분류하기' 버튼 우측에 'PDF 파일' 버튼을 추가한다.
-2. 'PDF 파일' 버튼 클릭 시 요약분류 결과를 내PC 다운로드 폴더 '회의록_YYYY_MM_DD_HH_mm_SS.pdf' 파일로 생성한다.</textarea>
+2. 'PDF 파일' 버튼 클릭 시 요약분류 결과를 세련된 보고서로 생성하여 내PC 다운로드 폴더 '회의록_YYYY_MM_DD_HH_mm_SS.pdf'로 저장한다.</textarea>
 <!--------------------------------------------------------------------------------------------------------------------------->
 <!-- 2. 자기소개서 요약분류 -->
 <!--------------------------------------------------------------------------------------------------------------------------->    
@@ -51,18 +52,19 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 자기소개서를 요약분류 하는 프로그램을 작성하여 '04.제미나이API' 폴더 '02.자기소개서분류.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
 1. 상위에 '파일선택' 버튼과 '요약분류하기' 버튼을 배치한다.
-2. 채용기준을 입력할 텍스트 입력상자를 배치한다.(초기 데이터: '데이터 분석 능력이 뛰어나고 협업을 중시하는 인재')
+2. 채용기준을 입력할 텍스트 입력상자를 배치한다. (초기 데이터: '데이터 분석 능력이 뛰어나고 협업을 중시하는 인재')
 3. 자기소개서 파일을 통합한 후 요약분류 결과를 출력할 텍스트 상자를 배치한다.
 4. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-5. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-6. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+5. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+6. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+7. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
 1. '파일선택' 버튼 클릭 시 자기소개서 파일을 선택한다.
@@ -75,8 +77,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
  - 잠재적 약점(2가지)
  - 적합 업무(2가지)
  - 입력한 채용기준을 참고하여 [최우수, 적합, 보류] 중 택 1
-2. 지원자(최우수): 지원자 이름, 등급, 자소서 내의 경험이나 문구를 근거로 들어 그렇게 평가한 사유를 한 줄로 요약해줘.
-</textarea>
+2. 지원자(최우수): 지원자 이름, 등급, 자소서 내의 경험이나 문구를 근거로 들어 그렇게 평가한 사유를 한 줄로 요약해줘.</textarea>
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">[추가 요구사항]
 채용기준 텍스트 상자를 선택상자(Select Box)로 변경하고 아래 값들을 추가한다.
 1. '데이터 분석 능력이 뛰어나고 협업을 중시하는 인재'
@@ -91,7 +92,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 기업행사 기획서 작성 프로그램을 작성하여 '04.제미나이API' 폴더 '03.기업행사기획서.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
@@ -105,8 +106,9 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
  - 행사인원 입력을 위한 텍스트 상자를 배치한다.
  - 행사예산 입력을 위한 텍스트 상자를 배치한다.
 2. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-3. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-4. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+3. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+4. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+5. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
 '행사 기획서 생성' 버튼 클릭 시 아래 [작성규칙] 내용을 참고하여 행사 장소 및 프로그램 정보를 깔끔하고 보기 좋게 출력한다.
@@ -122,7 +124,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 영어뉴스 요약번역 프로그램을 작성하여 '04.제미나이API' 폴더 '04.영어뉴스요약번역.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
@@ -130,8 +132,9 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 [UX/UI 디자인 요구사항]
 1. 영어뉴스 사이트 URL를 입력할 텍스트 상자와 '영어뉴스 요약번역' 버튼을 한 줄에 배치한다.
 2. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-3. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-4. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+3. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+4. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+5. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
 '영어뉴스 요약번역' 버튼 클릭 시 아래 [작성규칙] 내용을 참고하여 영어뉴스 요약번역 결과를 깔끔하고 보기 좋게 출력한다.
@@ -147,16 +150,18 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 이메일 자동작성 프로그램을 작성한 후 '04.제미나이API' 폴더 '05.이메일자동생성.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
 
 [UX/UI 디자인 요구사항]
-1. 이메일 초안을 여러 줄로 입력할 텍스트 상자와 '이메일 자동작성' 버튼을 보기 좋게 배치한다.
-2. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-3. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-4. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+1. 이메일 자동작성 버튼을 보기 좋게 배치한다.
+2. 이메일 초안을 3줄로 입력할 텍스트 상자를 배치한다. 
+3. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
+4. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+5. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+6. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
 '이메일 자동작성' 버튼 클릭 시 아래 [작성규칙] 내용을 참고하여 이메일 작성 결과를 깔끔하고 보기 좋게 출력한다.
@@ -168,7 +173,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">마케팅팀 이번 이벤트 시안 아직 인가요? 저번에 이번 주 수요일까지 주기로 해놓고 아무 말도 없으셔서 당황스럽네요. 저희 디자인팀은 이거 안 오면 손 놓고 기다려야 해요. 일정 밀리면 저희 책임 아니니까 빨리 확인해서 대답 좀 주세요.</textarea>
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">이번 주 금요일까지 그 기획서 완성 못 합니다. 지금 잡혀 있는 다른 급한 업무가 너무 많아서 물리적으로 시간이 안 나요. 인력을 더 붙여주시든가 아니면 다음 주 화요일 이후에나 가능하니까 그렇게 알고 계세요. 무리하게 진행하면 Quality가 엉망으로 나갑니다.</textarea>
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">[추가 요구사항]
-1. 톤앤메너를 선택할 선택상자(내용 아래 참고)와 '이메일 자동작성' 버튼위에 배치한다.
+1. 톤앤메너를 선택할 선택상자(내용 아래 참고)를 이메일 초안 텍스트 상자 위에 배치한다.
  - 논리적이고 차분함
  - 유연하고 협력적
  - 단호하고 엄격함
@@ -181,7 +186,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 음식 정보를 분석하는 프로그램을 작성한 후 '04.제미나이API' 폴더 '06.음식영양분석기.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
@@ -193,8 +198,9 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
  - 시진 업로드 버튼
  - 음식정보 분석 버튼
 2. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-3. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-4. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+3. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+4. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+5. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
 1. '음식정보 분석' 버튼 클릭 시 아래 내용을 참고하여 음식정보를 분석하고 분석결과를 깔끔하고 보기 좋게 출력한다.
@@ -208,7 +214,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 영수증을 분석하는 프로그램을 작성한 후 '04.제미나이API' 폴더 '07.영수증판독기.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
@@ -218,11 +224,12 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
  - 영수증 시진 업로드 버튼
  - 영수증 판독 버튼: 여러 개의 영수증 업로드 가능
 2. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-3. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-4. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+3. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+4. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+5. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
-1. '음식정보 분석' 버튼 클릭 시 아래 [정제규칙] 내용을 참고하여 영수증 정제결과를 깔끔하고 보기 좋게 출력한다.
+1. 음식정보 분석 버튼 클릭 시 아래 [정제규칙] 내용을 참고하여 영수증 정제결과를 깔끔하고 보기 좋게 출력한다.
  - 정제 칼럼명: 일자, 항목, 금액, 결제수단, 용도
  - [현재폴더]-[data 폴더] 영수증.csv 파일에 결과를 저장한다.
 2. '영수증 사진 업로드' 버튼 클릭 시 화면에 업로드 영수증 이미지를 출력한다.
@@ -240,7 +247,7 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
   <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">목표: 제미나이API를 이용하여 매출내역을 분석하는 프로그램을 작성한 후 '04.제미나이API' 폴더 '08.데이터분석시각화.py' 파일에 저장한다.
 
 [기술스택]
-tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
+tkinterWeb, markdown2, tkinterWeb, gemini-3.6-flash 모델
 
 [API KEY]
 프로젝트 폴더 .env 파일에서 GEMINI_API_KEY 변수 값 사용
@@ -248,11 +255,12 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
 [UX/UI 디자인 요구사항]
 1. 매출내역 업로드 버튼과 분석결과 버튼을 배치한다.
 2. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-3. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-4. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+3. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+4. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+6. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
-1. '분석결과' 버튼을 클릭하면 업로드 매출내역의 월별 매출액과 순이익률 분석하여 이중축 그래프로 출력한다.
+1. 분석결과 버튼을 클릭하면 업로드 매출내역의 월별 매출액과 순이익률 분석하여 이중축 그래프로 출력한다.
 2. 순이익률이 떨어진 달을 비즈니스 관점에서 원인을 진단하고 보완할 인사이트를 간단하게 2줄로 요약해줘.</textarea>
 <textarea class="doc-autotextarea autotextarea" rows="1" aria-label="예제 입력 (수정 가능)" spellcheck="false">[추가 요구사항]
 아래 내용으로 선택박스를 보기 좋은 위치에 배치하고 '분석결과' 버튼을 클릭하면 해당 그래프와 인사이트를 깔끔하고 보기 좋게 출력한다.
@@ -287,8 +295,9 @@ tkinter, markdown2, tkinterWeb, gemini-3.6-flash 모델
  - '질문을 입력 하세요.'라는 라벨과 사용자 입력을 받는 텍스트 상자(여려줄 입력 가능)을 배치한다.
  - '답변 생성' 버튼과 '내용 초기화' 버튼을 배치한다.
 2. 작업이 진행 중인 경우에는 로딩 메시지와 스피너(이미지)를 출력한다.
-3. tkinter 라이브러리를 사용하여 윈도우 프로그램으로 작성한다.
-4. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
+3. 모든 위젯은 적당한 여백과 간격으로 심플하고 세련되게 디자인한다.
+4. 일반적으로 많이 사용하는 예쁜 글꼴을 사용한다.
+5. 예외 처리: API 키가 없거나 호출에 실패했을 때 친절한 에러 메시지를 출력한다.
 
 [요구사항]
 1. '답변생성' 버튼을 클릭하면 GPT가 답변을 생성하여 깔끔하고 보기 좋게 출력한다.
